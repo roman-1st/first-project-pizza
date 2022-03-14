@@ -1,0 +1,537 @@
+body {
+  /* background-color:rgb(240, 240, 240);  */
+  background-color:rgb(255, 251, 251); 
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  margin: 1%;
+  border-bottom: 1px solid rgb(201, 201, 201);
+  border-radius: 0px;
+  font: normal 16px 'Montserrat', Times, serif;
+  align-items: center;
+}
+
+.words{
+  font: normal 14px 'Montserrat', Times, serif;
+}
+
+.header-pic{
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0;
+  align-items: center;
+}
+
+.divopenbasket {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+  height: 15%;
+  border: 1px solid black;
+  background-color: rgb(235, 246, 255);
+  margin: 0;
+  border-radius: 20px;
+  border: 1px solid rgb(201, 201, 201);
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.divopenbasket p{
+  font: normal 16px 'Montserrat', Times, serif;
+}
+
+#basket-open{
+  border-radius: 20px;
+  border: 0;
+  text-align: start;
+  padding: 10px;
+  color: rgb(88, 88, 88);
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  background: rgb(232, 240, 200);
+  outline: none; /* убирать контур в Mozilla */
+  border-radius: 15px;
+  border: 0px;
+  padding: .3em 1em;
+  font: normal 16px 'Montserrat';
+}
+#basket-open:hover { background: rgb(225, 255, 186); } /* при наведении курсора мышки */
+#basket-open:active { background: rgb(206, 255, 142); } /* при нажатии */
+
+#basket-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.basket-modal-content {
+  background-color:rgb(255, 251, 251);
+  margin: 15% auto;
+  padding: 15px;
+  width: 60%;
+  border-radius: 25px;
+  position: relative;
+}
+
+.basket-menu {
+ justify-content: space-around ;
+ align-items: flex-start;
+ margin: 2%;
+ border: 1px solid rgb(201, 201, 201);
+ border-radius: 25px; 
+ font: normal 18px 'Montserrat', Times, serif;
+ background-color: rgb(235, 246, 255);
+ padding: 2% 5% 5% 5%;
+ text-align: center;
+ overflow: hidden;
+ flex-wrap: wrap;
+ padding-left: 0;
+}
+
+.basket-top{
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-top h2{
+  margin: 2% 0 2% -10%;
+  color:rgb(46, 43, 43);
+  font: bolder 20px 'Montserrat', Times, serif;
+}
+
+#close-basket{ 
+  color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+cursor: default;
+width: 5%;
+}
+
+#basket{
+  border-spacing: 25px 5px;
+  width: 100%;
+  margin: 0;
+  color: rgb(88, 88, 88);
+  border-radius: 25px;
+}
+
+.basket-checkout {
+  display: flex;
+  justify-content: space-around ;
+  align-items: center;
+  margin: 2%;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 25px; 
+  font: bolder 18px 'Montserrat', Times, serif;
+  background-color: rgb(235, 246, 255);
+  /* padding: 1% 1% 1% 1%; */
+  text-align: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+  color: rgb(88, 88, 88);
+}
+
+.checkout{
+    color: rgb(88, 88, 88); 
+    text-decoration: none; 
+    user-select: none; 
+    background: rgb(210, 253, 204);
+    padding: 10px;
+    outline: none; 
+    border-radius: 15px;
+    font: normal 16px 'Montserrat';
+    border: 0px solid rgb(75, 74, 74);
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+  .checkout:hover { background-color: rgb(199, 250, 192); } /* при наведении курсора мышки */
+  .checkout:active { background-color: rgb(183, 253, 174); } /* при нажатии */
+
+
+
+#btnStart{
+  color: #fff; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  background: rgb(242, 245, 234); /* фон кнопки */
+  padding: .3em 1.5em; /* отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
+  border-radius: 15px;
+  font: normal 12px 'Monaco', Times, serif;
+  color: rgb(88, 88, 88);
+  border: 0 solid black;
+  
+} 
+/* #btnStart:hover { background: rgb(190, 232, 76); } при наведении курсора мышки */
+/* #btnStart:active { background: rgb(86, 152, 0); } при нажатии */
+
+.btnInstr{
+  color: #fff; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  background: rgb(212, 150, 56); /* фон кнопки */
+  padding: .3em 1.5em; /* отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
+} 
+.btnInstr:hover { background: rgb(190, 232, 76); } /* при наведении курсора мышки */
+.btnInstr:active { background: rgb(86, 152, 0); } /* при нажатии */
+
+header img {
+  margin-left: 50px;
+}
+
+header div{
+  font: normal 10px 'Montserrat', Times, serif;
+  margin: 10px;
+  margin-left: 100px;
+}
+
+/* header button {
+  background-color: rgb(219, 209, 148);
+  border-radius: 7px;
+  border: 1px solid black;
+  border-color: black;
+  font: normal 12px 'Times New Roman', Times, serif;
+} */
+
+.header_bottom {
+  align-items: flex-start;
+  margin: 1%;
+  border-radius: 0px;
+  font: normal 20px 'Montserrat', Times, serif;
+  align-items: center;
+  display: block;
+  background-color:rgb(255, 251, 251); 
+}
+
+.header_bottom h2{
+  margin-left: 2%;
+  margin-bottom: 0;
+}
+
+
+/*  Разделение header и main */
+
+
+main {
+  display: block;
+}
+
+#store {
+  display: flex;
+  flex-wrap: wrap ;
+  justify-content: space-around;
+  font: normal 20px 'Montserrat', Times, serif;
+  padding: 10px;
+}
+
+#store div {
+  background-color: rgb(235, 246, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 23%;
+  justify-content: space-between;
+  height: 250px;
+  margin-top: 20px;
+  border-radius: 25px;
+  padding: 10px 0;
+  border: 1px solid rgb(201, 201, 201);
+}
+
+#store div p{
+  font: normal 18px 'Montserrat', Times, serif;
+  padding-bottom: 10px;
+}
+
+#store div button {
+  color: rgb(88, 88, 88); /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  background: rgb(232, 240, 200); /* фон кнопки */
+  padding: .3em 1.5em; /* отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
+  border-radius: 25px;
+  margin-bottom: 10px;
+  border: 0px solid rgb(75, 74, 74);
+  font: normal 16px 'Montserrat';
+} 
+#store div button:hover { background: rgb(225, 255, 186); } /* при наведении курсора мышки */
+#store div button:active { background: rgb(206, 255, 142); } /* при нажатии */
+
+.main_bottom{
+  margin: 1%;
+  border-radius: 0px;
+  align-items: center;
+  display: block;
+  background-color:rgb(255, 251, 251); 
+  font: normal 20px 'Montserrat';
+}
+
+.main_bottom h2{
+  margin-left: 2%;
+}
+
+
+/* Разделение main и Instruction */
+
+
+.instruction {
+  height: 15%;
+  /* background-color:rgb(251, 253, 255); */
+  background-color: rgb(235, 246, 255);
+  align-items: left;
+  text-align: left;
+  margin: 0 15px 30px 2%;
+  border-radius: 25px;
+  padding: 5px 0 5px 2%;
+  font: normal 18px 'Montserrat';
+  border: 1px solid rgb(201, 201, 201);
+}
+
+ul {
+  font: normal 18px 'Montserrat', Times, serif;
+}
+
+.instruction ul button {
+  margin-left: 10px;
+  color: rgb(88, 88, 88);
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  background: rgb(232, 240, 200);
+  outline: none; /* убирать контур в Mozilla */
+  border-radius: 15px;
+  border: 0px solid rgb(75, 74, 74);
+  padding: .3em 1em;
+  font: normal 16px 'Montserrat';
+}
+.instruction ul button:hover { background: rgb(225, 255, 186); } /* при наведении курсора мышки */
+.instruction ul button:active { background: rgb(206, 255, 142); } /* при нажатии */
+
+
+.instruction h3 {
+  margin: 0px 10px 10px 10px;
+  vertical-align: bottom;
+  margin-left: 2%;
+  background:rgb(226, 222, 161)(250, 250, 250);
+}
+
+/* Разделение Instruction и ModalWindow */
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+  
+}
+
+.modal-content{
+background-color:rgb(240, 240, 240); 
+margin: 15% auto;
+padding: 15px;
+width: 50%;
+border-radius: 25px;
+
+position: relative;
+}
+
+#table_store{
+  justify-content: space-around ;
+  align-items: flex-start;
+  margin: 2%;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 25px; 
+  font: normal 18px 'Montserrat', Times, serif;
+  background-color: rgb(235, 246, 255);
+  padding: 2% 5% 5% 5%;
+  text-align: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.table-one {
+  background-color: rgb(235, 246, 255);
+  border-radius: 25px;
+  border: 1px solid rgb(201, 201, 201);
+}
+
+.table-one .table-header h2{
+  margin: 2% 0 2% 5%;
+  color:rgb(46, 43, 43);
+  font: bold 20px 'Montserrat', Times, serif;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Storage_header{
+  margin-left: 5%;
+  border-radius: 0px;
+  color:rgb(46, 43, 43);
+  align-items: center;
+  display: block;
+  background-color:rgb(240, 240, 240); 
+  font: normal 20px 'Montserrat';
+}
+
+
+#close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: default;
+  width: 5%;
+}
+
+#storage{
+  border-spacing: 25px 5px;
+  width: 100%;
+  margin: 0;
+  color: rgb(88, 88, 88);
+  border-radius: 25px;
+}
+
+.ind-condition {
+  width: 45%;
+  background: rgb(240, 200, 213);
+  border-radius: 25px;
+  color: rgb(88, 88, 88);
+}
+
+.selectedPosition {
+  border-spacing: 25px 5px;
+  background: rgb(70, 37, 37);
+  
+  width: 100%;
+  background-color: rgb(235, 246, 255);
+  color: rgb(88, 88, 88);
+  border-radius: 25px;
+  border: 1px solid rgb(201, 201, 201);
+  margin-top: 2%;
+}
+
+
+.tdHeader {
+  padding-left: 5%;
+  font: bold 18px 'Montserrat', Times, serif;
+  color: rgb(88, 88, 88);
+  width: 60%;
+}
+
+#storage td{
+  width: 60%;
+  padding-left: 5%;
+}
+
+#SelectedPos td {
+  width: 60%;
+  padding-left: 5%;
+}
+
+#SelectedPos {
+  border-spacing: 25px 5px;
+  width: 100%;
+  margin: 0;
+  background-color: rgb(235, 246, 255);
+  color: rgb(88, 88, 88);
+  border-radius: 25px;
+}
+
+/* body{
+  color: rgb(115, 207, 123);
+} */
+
+.btnAdd  {
+  color: rgb(88, 88, 88); /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  background: rgb(232, 240, 200);
+  padding: .3em 1em;
+  outline: none; /* убирать контур в Mozilla */
+  border-radius: 15px;
+  font: normal 16px 'Montserrat';
+  border: 0px solid rgb(75, 74, 74);
+  margin-left: 7%;
+}
+.btnAdd:hover { background: rgb(225, 255, 186); } /* при наведении курсора мышки */
+.btnAdd:active { background: rgb(206, 255, 142); } /* при нажатии */
+
+.btnDlt{
+  color: rgb(88, 88, 88); 
+  text-decoration: none; 
+  user-select: none; 
+  background-color: rgb(245, 241, 187);
+  padding: .3em 1em;
+  outline: none; 
+  border-radius: 15px;
+  font: normal 16px 'Montserrat';
+  border: 0px solid rgb(75, 74, 74);
+  margin-left: 7%;
+} 
+.btnDlt:hover { background: rgb(245, 212, 186); } /* при наведении курсора мышки */
+.btnDlt:active { background: rgb(245, 189, 189); } /* при нажатии */
+
+.CheckOutindpizza{
+  background-color: rgb(235, 246, 255);
+  font: normal 18px 'Montserrat', Times, serif;
+  width: 100%;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid rgb(201, 201, 201);
+  margin-top: 2%;
+}
+
+.CheckOut p{
+  font: bolder 18px 'Montserrat', Times, serif;
+  color: rgb(88, 88, 88);
+}
+
+
+#btnaddtobasket{
+  color: rgb(88, 88, 88); 
+  text-decoration: none; 
+  user-select: none; 
+  background: rgb(210, 253, 204);
+  padding: 10px;
+  outline: none; 
+  border-radius: 15px;
+  font: normal 16px 'Montserrat';
+  border: 0px solid rgb(75, 74, 74);
+  margin-right: 2%;
+  margin-left: 2%;
+}
+#btnaddtobasket:hover { background-color: rgb(199, 250, 192); } /* при наведении курсора мышки */
+#btnaddtobasket:active { background-color: rgb(183, 253, 174); } /* при нажатии */
+
+/* Разделение ModalWindow и footer */
+
+footer {
+  border-top: 1px solid rgb(201, 201, 201);
+  height: 100px;
+  margin: 1%;
+}

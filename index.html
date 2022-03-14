@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Онлайн-пиццерия</title>
+    <script src="script.js"> </script>
+    <script src="site.js"> </script>
+    <link rel="stylesheet" href="style.css">
+    <link> <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="header-pic"> 
+            <img src="img/page1.jpg" width="100" height="100"> 
+            <div class="words"> 
+                <h2> Онлайн-пиццерия</h2>
+                <h3>Закажите - получите - оплатите =)</h3> 
+            </div>
+        </div>
+        <div class="divopenbasket"> 
+            <p> Корзина покупок: </p>
+            <button id="basket-open" onclick="btnopenbasketmodal()"> Корзина </button>
+        </div>
+        <div id="basket-modal"> 
+            <div class="basket-modal-content"> 
+                <div class="basket-menu">
+                    <div class="basket-top"> 
+                        <h2> Корзина</h2>
+                        <span onclick="btnclosebasketmodal()" id="close-basket">&times; </span> 
+                    </div>
+                    <table id="basket"> 
+                        <tr class="tdHeader" > <td>Ингредиенты</td><td>Цена</td> <td> Удалить </td></tr>
+                    </table>
+                </div>
+                <div class="basket-checkout"> 
+                    <p id="sumBasket"> Стоимость заказа: </p> 
+                    <button class="checkout" onclick="checkoutalert()"> Заказать </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="header_bottom" class="header_bottom"> <h2> Пицца </h2></div>
+      
+    <main id="main"> 
+        <div id="store"> 
+        </div>  
+
+        <div class="main_bottom">
+            <h2> Собрать индивидуальный заказ</h2> 
+        </div> 
+        
+        <div class="instruction"> 
+            <h2>Как собрать и заказать уникальную пиццу?</h3>
+            <ul> Выберите основу (3 вида основы: тонкое, толстое, тесто с сырным бортом) </ul>
+            <ul> Добавляйте любые ингридиенты</ul>
+            <ul> Нажмите кнопку: "Оформить заказ" </ul>
+            <ul> Нажмите для начала: <button onclick="btnOpenModal()"> Начать </button>  </ul>
+        </div>
+
+        <div id="myModal" class="modal"> 
+            
+            <div class="modal-content"> 
+                
+                <div class="table_store"> 
+                    <div class="table-one"> 
+                        <div class="table-header">
+                            <h2> Соберите пиццу сами</h2>
+                            <span onclick="btnCloseModal()" id="close">&times; </span> 
+                        </div>
+                        
+                        <table id="storage">
+                            <tr class="tdHeader" ><td>Выберите допы</td><td >Добавить</td></tr> 
+                        </table>
+                    </div>
+                    <div class="selectedPosition"> 
+                        <table id="SelectedPos">
+                            <tr class="tdHeader">  <td >Вы выбрали:</td><td >Удалить </td></tr>
+                        </table>
+                    </div>
+                    
+                </div> 
+                <div class="CheckOutindpizza">
+                    <p id="sumindpizza"> Стоимость индивидуальной пиццы  </p> 
+                    <button id="btnaddtobasket" onclick="tobasket()"> Добавить в корзину </button> 
+                </div>
+            </div>  
+        </div>
+        
+
+        
+    </main>
+    
+
+
+    <footer> 
+        
+    </footer>
+
+</body>
+</html>
+
+      <!-- <div id="4cheez"> <p> `${pricesPizza[1]}` </p> 
+                <img id='pic' src="img/4cheez.png" width="100" height="100">
+                <p> 550 рублей</p> 
+                <button> Добавить в корзину </button>
+            </div>
+            <div id="margarita"> Маргарита 
+                <img id='pic' src="img/margarita.png" width="100" height="100">
+                <p> 550 рублей</p> 
+                <button> Добавить в корзину </button>
+            </div> 
+            <div id="pepperoni"> Пепперони 
+                <img id='pic' src="img/pepperoni.png" width="150" height="110">
+                <p> 550 рублей</p> 
+                <button> Добавить в корзину </button>
+            </div>
+            <div id="pineapple"> Пицца с ананасом 
+                <img id='pic' src="img/pineapple.png" width="100" height="150">
+                <p> 550 рублей</p> 
+                <button> Добавить в корзину </button>
+            </div>
+            <div id="bekon"> Пицца с беконом 
+                <img id='pic' src="img/bekon.png" width="150" height="100">
+                <p> 550 рублей</p> 
+                <button> Добавить в корзину </button>
+            </div>
+            <div id="tomato"> Томатная пицца 
+                <img id='pic' src="img/tomato.png" width="150" height="100">
+                <p> 550 рублей</p> 
+                <button> Добавить в корзину </button>
+            </div>
+            <div id="wegan"> Веганская пицца
+                <img id='pic' src="img/wegan.png" width="100" height="100">
+                <p> 550 рублей</p> 
+                <button> Добавить в корзину </button>
+            </div>
+            <div id="classic"> Классическая пицца
+                <img id='pic' src="img/classic.png" width="100" height="100">
+                <p> 550 рублей</p> 
+                <button> Добавить в корзину </button>
+            </div> -->
