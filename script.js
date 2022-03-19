@@ -13,14 +13,14 @@ let pricesInd = [
 ]
 
 let pricesPizza = [
-  { id: 1, img: "img/4cheez.png", width: "100", height: "100", name: 'Четыре сыра', price: 550 },
-  { id: 2, img: "img/margarita.png", width: "100", height: "100", name: 'Маргарита', price: 650 },
-  { id: 3, img: "img/pepperoni.png", width: "150", height: "110", name: 'Пепперони', price: 600 },
-  { id: 4, img: "img/pineapple.png", width: "100", height: "150", name: 'Пицца с ананасом', price: 640 },
-  { id: 5, img: "img/bekon.png", width: "150", height: "100", name: 'Пицца с беконом', price: 690 },
-  { id: 6, img: "img/tomato.png", width: "150", height: "100", name: 'Томатная пицца', price: 530 },
-  { id: 7, img: "img/wegan.png", width: "100", height: "100", name: 'Веганская пицца', price: 490 },
-  { id: 8, img: "img/classic.png", width: "120", height: "120", name: 'Классическая пицца', price: 590 },
+  { id: 1, img: "img/burger.png", name: 'Бургер', price: 550 },
+  { id: 2, img: "img/hotdog.png", name: 'Хот-дог', price: 650 },
+  { id: 3, img: "img/lazania.png", name: 'Лазанья', price: 600 },
+  { id: 4, img: "img/pizza-yellow.png", name: 'Пицца желтенькая', price: 640 },
+  { id: 5, img: "img/pizza.png", name: 'Пицца беленькая', price: 690 },
+  { id: 6, img: "img/popcorn.png", name: 'Попкорн', price: 530 },
+  { id: 7, img: "img/spring-roll.png", name: 'Интересный ролл', price: 490 },
+  { id: 8, img: "img/salat.png", name: 'Салатик', price: 590 },
 ]
 
 let orders = []
