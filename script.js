@@ -22,7 +22,7 @@ let pricesPizza = [
   { id: 7, img: "img/spring-roll.png", name: 'Интересный ролл', price: 490 },
   { id: 8, img: "img/salat.png", name: 'Салатик', price: 590 },
 ]
-
+ 
 let orders = []
 let Pizza = []
 let basket = []
