@@ -40,8 +40,8 @@ function viewSumPizza(b) {
   b.forEach(c => {
     let store1div = document.createElement('div');
     store1div.id = c.id;
-    store1div.innerHTML = `${c.name} <img id="pic" src="${c.img}" width=${c.width} height=${c.height}>
-    <p> ${c.price} рублей </p> <button id="addP-${c.id}"> Добавить в корзину </button>`
+    store1div.innerHTML = `${c.name} <img id="pic" src="${c.img}"> <p> ${c.price} рублей </p>
+    <button id="addP-${c.id}"> Добавить в корзину </button>`
     store1.append(store1div);
     document.getElementById(`addP-${c.id}`).addEventListener('click', () => {
       let pizzaObj = pricesPizza.find((elem) => {
@@ -52,11 +52,7 @@ function viewSumPizza(b) {
         elem: pizzaObj,
       }
 
-      delete pizzaPos.elem.height,
-        delete pizzaPos.elem.width,
-        delete pizzaPos.elem.img,
-
-        Pizza.push(pizzaPos)
+      Pizza.push(pizzaPos)
       shoppingbasketPizza(pizzaPos)
       console.log(Pizza);
     })
@@ -181,24 +177,3 @@ function checkoutalert() {
     alert(`Заказ на сумму ${sumBasket} рублей сформирован! Ожидайте подтверждения заказа!`)
   }
 }
-
-
-// функция для удаления елемента в html.
-
-// function removeElement(from, element) {
-//   from.removeChild(element)
-// }
-
-// createElement(
-//           "h6",
-//           "shadow-sm p-3 mb-5 bg-warning rounded card-item",
-//           "<h5>" + Ingredient.name + " <span class=\"badge badge-secondary\" >"
-//           + Ingredient.price + "р"
-//           + "</span>"
-//           + "<button type=\"button\"  class=\"close delete-ingredient\"  aria-label=\"Close\">\n" +
-//           "  <span id=\"delete-ingredient" + ingredientId + "\" " + "aria-hidden=\"true\">&times;</span>\n" +
-//           "</button></h5>",
-//           className("card-body card-ingredient-body")[0]
-//       )
-
-// Цель проекта: создание, изменение, получение и отображение данных масива в html при взаимодейстии с элементом.
