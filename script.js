@@ -87,7 +87,7 @@ function viewSum(a) {
 function shoppingbasketPizza(pizzaPos) {
   let basketPosition = document.createElement("tr");
   basketPosition.id = pizzaPos.id;
-  basketPosition.innerHTML = `<td>${pizzaPos.elem.name}</td><td>${pizzaPos.elem.price} рублей </td> <button id="dlt-${pizzaPos.id}" class="btnDlt"> Удалить </button>`;
+  basketPosition.innerHTML = `<td>${pizzaPos.elem.name}<img src="${pizzaPos.elem.img}" width=20 height=20></td><td>${pizzaPos.elem.price} рублей </td> <button id="dlt-${pizzaPos.id}" class="btnDlt"> Удалить </button>`;
   document.getElementById('basket').append(basketPosition);
 
   sumBasket += pizzaPos.elem.price
@@ -134,7 +134,7 @@ function tobasket() {
   sumind.price = orders.map(item => item.elem.price).reduce((prev, curr) => prev + curr, 0)
 
   let indbasket = document.createElement('tr');
-  indbasket.innerHTML = `<td>${sumind1.elem.name}</td><td>${sumind1.elem.price} рублей </td> <button class="btnDlt" id="dlt-${sumind1.id}"> Удалить </button>`;
+  indbasket.innerHTML = `<td>${sumind1.elem.name} </td><td>${sumind1.elem.price} рублей </td> <button class="btnDlt" id="dlt-${sumind1.id}"> Удалить </button>`;
   document.getElementById('basket').append(indbasket)
   sumBasket += sumind1.elem.price
   document.getElementById('btnaddtobasket').style.background = 'rgb(115, 207, 123)';
@@ -168,12 +168,28 @@ function btnclosebasketmodal() {
   document.getElementById("basket-modal").style.display = 'none';
 }
 
+// function checkoutalert() {
+//   if (sumBasket == 0) {
+//     alert('Вы ничего не выбрали=(')
+//   } else if (sumBasket < 700) {
+//     alert('Минимальная сумма заказа 700 рублей, добавьте еще чуть-чуть =)')
+//   } else {
+//     
+//   }
+// }
+
+let order = []
+
 function checkoutalert() {
   if (sumBasket == 0) {
     alert('Вы ничего не выбрали=(')
   } else if (sumBasket < 700) {
     alert('Минимальная сумма заказа 700 рублей, добавьте еще чуть-чуть =)')
   } else {
+    order.name = prompt('Укажите ваше имя') 
+    order.number = prompt('Укажите ваш номер телефона') 
+    order.push(Pizza)
+    console.log(order)
     alert(`Заказ на сумму ${sumBasket} рублей сформирован! Ожидайте подтверждения заказа!`)
   }
 }

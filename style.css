@@ -11,6 +11,7 @@ header{
   border-radius: 0px;
   font: normal 16px 'Montserrat', Times, serif;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .words{
@@ -22,13 +23,32 @@ header{
   justify-content: flex-start;
   margin-left: 0;
   align-items: center;
+  
+}
+
+.header-pic img{
+  width: 10%;
+}
+
+.header-pic div h2{
+  width: 250px;
+}
+
+.header-pic div h3{
+  width: 250px;
+}
+
+
+
+.header-pic div{
+  flex-wrap: wrap;
 }
 
 .divopenbasket {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 25%;
+  width: 200px;
   height: 15%;
   border: 1px solid black;
   background-color: rgb(247, 250, 252);
@@ -38,6 +58,9 @@ header{
   margin-right: 10px;
   padding-left: 10px;
   padding-right: 10px;
+
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .divopenbasket p{
@@ -242,9 +265,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 23%;
+  width: 300px;
   justify-content: space-between;
-  height: 250px;
   margin-top: 20px;
   border-radius: 25px;
   padding: 10px 0;
