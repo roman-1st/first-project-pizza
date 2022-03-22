@@ -16,6 +16,9 @@ header{
 
 .words{
   font: normal 14px 'Montserrat', Times, serif;
+  width: 200px;
+  margin-left: 30px;
+  min-width: 10%;;
 }
 
 .header-pic{
@@ -28,10 +31,13 @@ header{
 
 .header-pic img{
   width: 10%;
+  min-width: 70px;
+  margin-left: 20px;
 }
 
 .header-pic div h2{
   width: 250px;
+
 }
 
 .header-pic div h3{
@@ -105,6 +111,7 @@ header{
   width: 60%;
   border-radius: 25px;
   position: relative;
+  min-width: 350px;
 }
 
 .basket-menu {
@@ -120,6 +127,10 @@ header{
  overflow: hidden;
  flex-wrap: wrap;
  padding-left: 0;
+}
+
+.picbasket {
+  margin-left: 5px;
 }
 
 .basket-top{
@@ -159,11 +170,33 @@ width: 5%;
   border-radius: 25px; 
   font: bolder 18px 'Montserrat', Times, serif;
   background-color: rgb(247, 250, 252);
-  /* padding: 1% 1% 1% 1%; */
   text-align: center;
   overflow: hidden;
   flex-wrap: wrap;
   color: rgb(88, 88, 88);
+}
+
+.name {
+  width: 80%;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  font: optional;
+  color: rgb(88, 88, 88);
+  font: bolder 14px 'Montserrat', Times, serif;
+}
+
+.numberphone {
+  width: 80%;
+  margin: 15px 0 15px 0;
+  border-radius: 10px;
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  color: rgb(88, 88, 88);
+  font: bolder 14px 'Montserrat', Times, serif;
 }
 
 .checkout{
@@ -178,6 +211,7 @@ width: 5%;
     border: 0px solid rgb(75, 74, 74);
     margin-right: 2%;
     margin-left: 2%;
+    margin-bottom: 15px;
   }
   .checkout:hover { background-color: rgb(199, 250, 192); } /* при наведении курсора мышки */
   .checkout:active { background-color: rgb(183, 253, 174); } /* при нажатии */
@@ -370,7 +404,8 @@ ul {
 background-color:rgb(240, 240, 240); 
 margin: 15% auto;
 padding: 15px;
-width: 50%;
+width: 35%;
+min-width: 300px;
 border-radius: 25px;
 
 position: relative;
@@ -492,7 +527,7 @@ position: relative;
   text-decoration: none; /* убирать подчёркивание у ссылок */
   user-select: none; /* убирать выделение текста */
   background: rgb(232, 240, 200);
-  padding: .3em 1em;
+  width: 90px;
   outline: none; /* убирать контур в Mozilla */
   border-radius: 15px;
   font: normal 16px 'Montserrat';
@@ -507,7 +542,8 @@ position: relative;
   text-decoration: none; 
   user-select: none; 
   background-color: rgb(245, 241, 187);
-  padding: .3em 1em;
+  text-align: center;
+  width: 90px;
   outline: none; 
   border-radius: 15px;
   font: normal 16px 'Montserrat';
@@ -519,7 +555,7 @@ position: relative;
 
 .CheckOutindpizza{
   background-color: rgb(247, 250, 252);
-  font: normal 18px 'Montserrat', Times, serif;
+  font: normal 16px 'Montserrat', Times, serif;
   width: 100%;
   border-radius: 25px;
   display: flex;
@@ -530,9 +566,10 @@ position: relative;
   margin-top: 2%;
 }
 
-.CheckOut p{
-  font: bolder 18px 'Montserrat', Times, serif;
+#sumindpizza{
+  font: bolder 16px 'Montserrat', Times, serif;
   color: rgb(88, 88, 88);
+  margin-left: 10px;
 }
 
 
@@ -541,13 +578,14 @@ position: relative;
   text-decoration: none; 
   user-select: none; 
   background: rgb(210, 253, 204);
-  padding: 10px;
   outline: none; 
   border-radius: 15px;
-  font: normal 16px 'Montserrat';
+  font: normal 14px 'Montserrat';
   border: 0px solid rgb(75, 74, 74);
   margin-right: 2%;
   margin-left: 2%;
+  padding: 5px;
+  width:110px;
 }
 #btnaddtobasket:hover { background-color: rgb(199, 250, 192); } /* при наведении курсора мышки */
 #btnaddtobasket:active { background-color: rgb(183, 253, 174); } /* при нажатии */

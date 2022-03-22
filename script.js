@@ -64,7 +64,7 @@ function viewSum(a) {
   a.forEach(e => {
     let itemTR = document.createElement('tr');
     itemTR.id = e.id;
-    itemTR.innerHTML = `<td>${e.name} + ${e.price} рублей </td> <button  class="btnAdd" id="add-${e.id}" > Добавить </button>`;
+    itemTR.innerHTML = `<td>${e.name} </td> <button  class="btnAdd" id="add-${e.id}" >+${e.price} руб.</button>`;
     storageTable.append(itemTR);
     document.getElementById(`add-${e.id}`).addEventListener('click', () => {
       let orderObj = pricesInd.find((elem) => {
@@ -87,7 +87,7 @@ function viewSum(a) {
 function shoppingbasketPizza(pizzaPos) {
   let basketPosition = document.createElement("tr");
   basketPosition.id = pizzaPos.id;
-  basketPosition.innerHTML = `<td>${pizzaPos.elem.name}<img src="${pizzaPos.elem.img}" width=20 height=20></td><td>${pizzaPos.elem.price} рублей </td> <button id="dlt-${pizzaPos.id}" class="btnDlt"> Удалить </button>`;
+  basketPosition.innerHTML = `<td>${pizzaPos.elem.name}<img class="picbasket" src="${pizzaPos.elem.img}" width=20 height=20></td><td>${pizzaPos.elem.price} рублей </td> <button id="dlt-${pizzaPos.id}" class="btnDlt"> Удалить </button>`;
   document.getElementById('basket').append(basketPosition);
 
   sumBasket += pizzaPos.elem.price
@@ -107,7 +107,7 @@ function shoppingbasketPizza(pizzaPos) {
 
 function addToSum(orderPos) {
   let priceRT = document.createElement("tr");
-  priceRT.innerHTML = `<td>${orderPos.elem.name} + ${orderPos.elem.price} рублей</td> <button id="dlt-${orderPos.id}" class="btnDlt"> Удалить </button>`;
+  priceRT.innerHTML = `<td>${orderPos.elem.name} </td> <button id="dlt-${orderPos.id}" class="btnDlt">+${orderPos.elem.price} руб.</button>`;
   document.getElementById('SelectedPos').append(priceRT);
 
   Sum += orderPos.elem.price
@@ -168,16 +168,6 @@ function btnclosebasketmodal() {
   document.getElementById("basket-modal").style.display = 'none';
 }
 
-// function checkoutalert() {
-//   if (sumBasket == 0) {
-//     alert('Вы ничего не выбрали=(')
-//   } else if (sumBasket < 700) {
-//     alert('Минимальная сумма заказа 700 рублей, добавьте еще чуть-чуть =)')
-//   } else {
-//     
-//   }
-// }
-
 let order = []
 
 function checkoutalert() {
@@ -185,11 +175,16 @@ function checkoutalert() {
     alert('Вы ничего не выбрали=(')
   } else if (sumBasket < 700) {
     alert('Минимальная сумма заказа 700 рублей, добавьте еще чуть-чуть =)')
+  } else if(document.querySelector(".name").value == '') {
+    alert('Вы не указали Ваше имя ')
+  } else if (document.querySelector(".numberphone").value == '') {
+    alert('Вы не указали номер телефона')
   } else {
-    order.name = prompt('Укажите ваше имя') 
-    order.number = prompt('Укажите ваш номер телефона') 
+    order.name = document.querySelector(".name").value
+    order.number = document.querySelector(".numberphone").value
+    console.log(`${order.name} + ${order.number}`)
     order.push(Pizza)
     console.log(order)
-    alert(`Заказ на сумму ${sumBasket} рублей сформирован! Ожидайте подтверждения заказа!`)
+    alert(`Супер, ${order.name}! Заказ на сумму ${sumBasket} рублей сформирован! Ожидайте подтверждения заказа!`)
   }
 }
